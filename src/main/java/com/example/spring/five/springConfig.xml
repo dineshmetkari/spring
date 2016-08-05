@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The beans' properties are standards that can be copied from each spring application -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+	<!-- Defining a bean for student -->
+	<bean id="student" class="com.example.spring.five.Student">
+	
+		<!-- The student's properties are defined using the setters. This is 
+		called Spring Setter-based Dependency Injection (DI). To use this kind 
+		of DI the bean's class should implement the setters for the given properties. 
+		-->
+		<property name="firstName" value="Max" />
+		<property name="lastName" value ="Mustermann"/>
+		<property name="age" value="18" />
+		<!-- Refer to the bean defined with the id school -->
+		<property name="school" ref="school" />
+		 
+	</bean>
+	
+	<!-- Defining a bean for the school. This bean is the one refered to above. In this case it is called inner bean -->
+	<bean id="school" class="com.example.spring.five.School">
+		<constructor-arg value="HAW Hamburg"/>
+	</bean>
+	
+</beans>
