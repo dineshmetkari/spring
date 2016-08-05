@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The beans' properties are standards that can be copied from each spring application -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+	<!-- Defining a bean for student -->
+	<bean id="student" class="com.example.spring.four.Student">
+	
+		<!-- The student's properties are defined using the setters. This is 
+		called Spring Setter-based Dependency Injection (DI). To use this kind 
+		of DI the bean's class should implement the setters for the given properties. 
+		-->
+		<property name="firstName" value="Max" />
+		<property name="lastName" value ="Mustermann"/>
+		<property name="age" value="18" />
+		
+	</bean>
+	
+</beans>
