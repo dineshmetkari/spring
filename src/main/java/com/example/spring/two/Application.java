@@ -22,7 +22,7 @@ public class Application {
 		Student student = (Student) context.getBean("student");
 		
 		// The name and the age should be taken care of by the bean configuration as constuctor's parameters
-		student.greeting("Greeting from Spring using spring constructor-based dependency injection with explicitly defined parameters");
+		student.greeting("Greeting from Spring using spring constructor-based dependency injection");
 	}
 
 }
